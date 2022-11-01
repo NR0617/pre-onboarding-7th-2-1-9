@@ -1,18 +1,5 @@
 import axios from "axios";
 
-export const fuelType = {
-  "GASOLINE" : "gasoline",
-  "HYBRID" : "hybrid" ,
-  "EV":"ev"
-}
-
-export const segment = {
-  "C" : "C",
-  "D" : "D",
-  "E" : "E",
-  "SUV" : "SUV"
-}
-
 export const axiosInstance = axios.create({
   baseURL: process.env.REACT_APP_URL,
   headers: {
