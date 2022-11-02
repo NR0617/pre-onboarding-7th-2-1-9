@@ -1,9 +1,8 @@
 import { axiosInstance } from "./axiosInstance";
 
-export const fetchCarList = async(fuelType, segment) =>{
+export const fetchCarList = async(segment) =>{
   const config = {
     params : {
-      fuelType,
       segment
     }
   }
