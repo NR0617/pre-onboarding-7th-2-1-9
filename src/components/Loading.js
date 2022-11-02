@@ -1,6 +1,7 @@
+import Layout from "./Layout"
 const Loading = () => {
   return(
-    <div>Loading</div>
+    <Layout>Loading</Layout>
   )
 }
 

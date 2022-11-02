@@ -8,11 +8,18 @@ const HeaderBar = ({ title }) => {
   const handleGoBack = () => {
     navigete(-1)
   }
+  if(title==='전체 차량'){
+    return(
+      <HeaderLayout>
+      <Title>{title}</Title>
+    </HeaderLayout>
+    )
+  }
   return (
     <HeaderLayout>
-      <div onClick={handleGoBack} >
+      <GoBack onClick={handleGoBack} >
         <ArrowBtn />
-      </div>
+      </GoBack>
       <Title>{title}</Title>
     </HeaderLayout>
   )
@@ -25,9 +32,14 @@ top-0
 left-0
 right-0
 flex
+bg-white
+
 `
 const Title = tw.h1`
-
+text-center
+`
+const GoBack = tw.div`
+cursor-pointer
 `
 
 export default HeaderBar
