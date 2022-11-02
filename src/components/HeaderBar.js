@@ -1,3 +1,4 @@
+import tw from 'tailwind-styled-components'
 import { useNavigate } from "react-router-dom"
 import ArrowBtn from "../assets/ArrowBtn"
 
@@ -8,14 +9,25 @@ const HeaderBar = ({ title }) => {
     navigete(-1)
   }
   return (
-    <div>
+    <HeaderLayout>
       <div onClick={handleGoBack} >
         <ArrowBtn />
       </div>
-      <h1>{title}</h1>
-    </div>
+      <Title>{title}</Title>
+    </HeaderLayout>
   )
 }
 
+const HeaderLayout = tw.section`
+h-10
+fixed
+top-0
+left-0
+right-0
+flex
+`
+const Title = tw.h1`
+
+`
 
 export default HeaderBar

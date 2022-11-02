@@ -1,44 +1,45 @@
 import { useEffect } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
-import Header from "../components/Header"
-import Loading from '../components/Loading'
-
+import Header from "../components/HeaderBar"
+// import Loading from '../components/Loading'
+import ListHeader from "../components/carDetail/ListHeader"
+import ListItem from "../components/carDetail/ListItem"
 const CarDetail = () => {
   const { state } = useLocation()
   const navigate = useNavigate()
-  useEffect(()=>{
-    if(!state){
+  useEffect(() => {
+    if (!state) {
       navigate('/')
     }
-  },[])
-  if(!state){
-    return <Loading />
-  }
+  }, [navigate,state])
+  // if (!state) {
+  //   return <Loading />
+  // }
   return (
     <div>
       <Header title={'차량 상세'} />
-      <img src={state.attribute.imageUrl} alt={state.attribute.name} />
-      <div>{state.attribute.brand}</div>
-      <div>{state.attribute.name}</div>
-      <div>{state.amount}</div>
-      <div>차량 정보</div>
+      <img src={state?.attribute.imageUrl} alt={state?.attribute.name} />
+      <ul>
+        <ListItem>{state?.attribute.brand}</ListItem>
+        <ListItem>{state?.attribute.name}</ListItem>
+        <ListItem>{state?.amount}</ListItem>
+      </ul>
+      <ListHeader>차량 정보</ListHeader>
+      <ul>
+        <ListItem>차종 {state?.attribute.segment}</ListItem>
+        <ListItem>연료{state?.attribute.fuelType}</ListItem>
+        <ListItem>이용 가능일 {state?.startDate}</ListItem>
+      </ul>
+      <ListHeader>보험</ListHeader>
       <div>
-        <div>차종 {state.attribute.segment}</div>
-        <div>연료{state.attribute.fuelType}</div>
-        <div>이용 가능일 {state.startDate}</div>
       </div>
-      <div>보험</div>
-      <div>
-
-      </div>
-      <div>추가상품</div>
-      {state.additionalProducts.map((present, index)=>(
-        <div key={index}>
-          <div>{present.name}</div>
-          <div>{present.amount}</div>
-        </div>
-      ))
-      }
+      <ListHeader>추가상품</ListHeader>
+      <ul>
+        {state?.additionalProducts.map((present, index) => (
+          <ListItem key={index}>{present.name} {present.amount}</ListItem>
+        ))
+        }
+      </ul>
     </div>
   )
 }

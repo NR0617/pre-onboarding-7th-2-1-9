@@ -2,6 +2,7 @@ import React from "react"
 import { useSetRecoilState } from "recoil"
 import { fuelTypeParameter, segmentParameter } from "../../recoil/filterOption"
 import { All, FUEL_TYPE, SEGMENT } from "../../utils/constantValue"
+import tw from 'tailwind-styled-components'
 const Filter = ({ option }) => {
   const setFuelTypeState = useSetRecoilState(fuelTypeParameter)
   const setSegmentState = useSetRecoilState(segmentParameter)
@@ -43,9 +44,12 @@ const Filter = ({ option }) => {
   return (
     <React.Fragment>
       <label htmlFor={option.name} >{option.name}</label>
-      <input type='radio' name={option.type} value={option.parameter} onChange={(e) => handleFilter(e.target)} id={option.name} />
+      <FilterInput type='radio' name={option.type} value={option.parameter} onChange={(e) => handleFilter(e.target)} id={option.name} />
     </React.Fragment>
   )
 }
+
+const FilterInput = tw.input`
+`
 
 export default Filter
