@@ -4,12 +4,12 @@ import Filter from "./Filter";
 const FilterList = () => {
   return(
     <div>
+      <form>
       {optionList.map((option,index)=>(
-        <React.Fragment key={index}>
-          <Filter option={option}/>
-        </React.Fragment>
+          <Filter key={index} option={option}/>
       )
       )}
+      </form>
     </div>
   )
 }
