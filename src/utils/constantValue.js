@@ -18,6 +18,7 @@ export const optionList = [
   {
     name : '전체',
     type : All,
+    parameter:null
   }, 
   {
   name :  '대형',
@@ -38,20 +39,5 @@ export const optionList = [
     name:'SUV',
     type: SEGMENT,
     parameter : segment.SUV
-  }, 
-  {
-    name:'가솔린',
-    type:FUEL_TYPE,
-    parameter : fuelType.GASOLINE
-  },
-  {
-    name:'전기',
-    type:FUEL_TYPE,
-    parameter : fuelType.EV
-  },
-  {
-    name:'하이브리드',
-    type : FUEL_TYPE,
-    parameter : fuelType.HYBRID
   }
 ]

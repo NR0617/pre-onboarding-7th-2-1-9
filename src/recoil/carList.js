@@ -3,8 +3,8 @@ import { fetchCarList } from "../api/cars";
 
 export const carList = selectorFamily({
   key:'carList',
-  get: (carInfo) =>  async () => {
-    const response = await fetchCarList(carInfo.fuelType, carInfo.segment)
+  get: (segment) =>  async () => {
+    const response = await fetchCarList(segment)
     return response
   }
 })
