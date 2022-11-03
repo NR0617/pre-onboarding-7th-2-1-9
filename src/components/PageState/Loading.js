@@ -1,6 +1,6 @@
-import Layout from "./Layout"
+import Layout from "../common/Layout"
 const Loading = () => {
-  return(
+  return (
     <Layout>Loading</Layout>
   )
 }

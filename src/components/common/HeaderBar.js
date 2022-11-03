@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 import { useNavigate } from "react-router-dom"
-import ArrowBtn from "../assets/ArrowBtn"
+import ArrowBtn from "../../assets/ArrowBtn"
 
 const HeaderBar = ({ title }) => {
   const navigete = useNavigate();
@@ -8,11 +8,12 @@ const HeaderBar = ({ title }) => {
   const handleGoBack = () => {
     navigete(-1)
   }
-  if(title==='전체 차량'){
-    return(
+  if (title === '전체 차량') {
+    return (
       <HeaderLayout>
-      <Title>{title}</Title>
-    </HeaderLayout>
+
+        <Title>{title}</Title>
+      </HeaderLayout>
     )
   }
   return (
@@ -33,13 +34,16 @@ left-0
 right-0
 flex
 bg-white
-
 `
 const Title = tw.h1`
+w-full
 text-center
+font-bold
+text-2xl
 `
 const GoBack = tw.div`
 cursor-pointer
+ml-3
 `
 
 export default HeaderBar
