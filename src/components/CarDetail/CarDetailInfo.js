@@ -4,27 +4,27 @@ import { Theme } from '../../styles/Theme';
 import { transDate } from '../../utils/dateTrans';
 
 function CarDetailInfo({ info }) {
-  const date = transDate(info.startDate);
+  const date = transDate(info?.startDate);
 
-  const amount = info.additionalProducts[0]?.amount
+  const amount = info?.additionalProducts[0]?.amount
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-  const isNoAmount = info.additionalProducts.length === 0;
+  const isNoAmount = info?.additionalProducts.length === 0;
 
   return (
     <div>
       <DetailTitle children={'차량정보'} />
-      <DetailText name={'차종'} descript={info.attribute.segment} />
-      <DetailText name={'연료'} descript={info.attribute.fuelType} />
+      <DetailText name={'차종'} descript={info?.attribute.segment} />
+      <DetailText name={'연료'} descript={info?.attribute.fuelType} />
       <DetailText name={'이용 가능일'} descript={`${date} 부터`} />
       <DetailTitle children={'보험'} />
-      <DetailText name={info.insurance[0].name} descript={info.insurance[0].description} />
-      <DetailText name={info.insurance[1].name} descript={info.insurance[1].description} />
+      <DetailText name={info?.insurance[0].name} descript={info?.insurance[0].description} />
+      <DetailText name={info?.insurance[1].name} descript={info?.insurance[1].description} />
       {!isNoAmount && (
         <>
           <DetailTitle children={'추가상품'} />
-          <DetailText name={info.additionalProducts[0].name} descript={amount} />
+          <DetailText name={info?.additionalProducts[0].name} descript={amount} />
         </>
       )}
     </div>

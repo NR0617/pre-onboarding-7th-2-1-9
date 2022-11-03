@@ -8,15 +8,19 @@ function CarDetailProfileBox({ image, brand }) {
     <CarDetailProfileBoxLayout>
       <CarDetailImage image={image} />
       <StyleCarDetailBrand>
-        <Text text={brand.attribute.brand} fontSize={Theme.text.big} fontWeight={Theme.text.bold} />
         <Text
-          text={brand.attribute.name}
-          fontSize={Theme.text.extraBig}
+          text={brand?.attribute.brand}
+          fontSize={Theme.text.big}
           fontWeight={Theme.text.bold}
+        />
+        <Text
+          text={brand?.attribute.name}
+          fontSize={Theme?.text.extraBig}
+          fontWeight={Theme?.text.bold}
         />
       </StyleCarDetailBrand>
       <StyleCarDetailPrice>
-        <Text text={`월 ${brand.amount} 원`} />
+        <Text text={`월 ${brand?.amount} 원`} />
       </StyleCarDetailPrice>
     </CarDetailProfileBoxLayout>
   );

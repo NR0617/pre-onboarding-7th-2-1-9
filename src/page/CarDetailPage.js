@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Heading from '../components/Heading/Heading';
 import CarDetail from '../components/CarDetail/CarDetail';
-import { useCarState } from '../context/carContext';
+import { getCarList, useCarDispatch, useCarState } from '../context/carContext';
 
 function CarDetailPage() {
   const state = useCarState();
+  const dispatch = useCarDispatch();
   const { data: carList } = state.carList;
+
+  useEffect(() => {
+    getCarList(dispatch);
+  }, [getCarList]);
 
   return (
     <div>
