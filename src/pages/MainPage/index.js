@@ -15,7 +15,7 @@ const MainPage = () => {
   useEffect(() => {
     setIsLoading(true);
     getCarsData(checkedQuery).then(payLoad => {
-      console.log(payLoad);
+      if (!payLoad !== false) return;
       if (payLoad.length === 0) {
         setHasNoData(true);
         setcarListItems(payLoad);
