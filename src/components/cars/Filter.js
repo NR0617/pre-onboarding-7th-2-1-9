@@ -1,7 +1,6 @@
 import React from "react"
 import { useRecoilState } from "recoil"
 import {segmentParameter } from "../../recoil/filterOption"
-// import { All, FUEL_TYPE, SEGMENT } from "../../utils/constantValue"
 import tw from 'tailwind-styled-components'
 const Filter = ({ option }) => {
 const [segmentState,setSegmentState] = useRecoilState(segmentParameter)
@@ -25,6 +24,7 @@ rounded-2xl
 w-12
 text-center
 cursor-pointer
+mx-1
 `
 
 
