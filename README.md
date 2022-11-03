@@ -90,9 +90,9 @@ return (
   - 내용: 월 car.amount 원
   - 사진: 차량 사진
 
-|                                                                     Discord                                                                     |                                                                     Kakao                                                                     |
-| :---------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img width="300" alt="seo_discord" src="https://user-images.githubusercontent.com/74575497/199489718-9a3c3bad-0183-448e-8ac2-f295021e5146.png"> | <img width="271" alt="seo_kakao" src="https://user-images.githubusercontent.com/74575497/199489727-04f6dd93-312d-4ee6-bb69-1f42ecb21fd7.png"> |
+|                                                                     Discord                                                                     |                                                                     Kakao                                                                     |Facebook|
+| :---------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: |:--:|
+| <img width="250" alt="seo_discord" src="https://user-images.githubusercontent.com/74575497/199489718-9a3c3bad-0183-448e-8ac2-f295021e5146.png"> | <img width="271" alt="seo_kakao" src="https://user-images.githubusercontent.com/74575497/199489727-04f6dd93-312d-4ee6-bb69-1f42ecb21fd7.png"> |<img width="250" alt="seo_face" src="https://user-images.githubusercontent.com/74575497/199501362-dd45f033-8a46-46af-9745-001b061cc9d8.png"/>|
 
 ```js
 // next-seo 라이브러리를 사용하여 meta 태그 작성
@@ -110,6 +110,8 @@ return (
   }}
 />
 ```
+## **Assignment 5 (추가 구현 사항)**
+ - 페이지 전환시 부드러운 애니메이션 효과 추가
 
 ## **Getting Started**
 
