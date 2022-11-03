@@ -22,7 +22,6 @@ const MainPage = () => {
       } else {
         setHasNoData(false);
         setcarListItems(payLoad);
-        console.log(payLoad);
       }
       setIsLoading(false);
     });
@@ -48,10 +47,7 @@ const MainPage = () => {
                         key={idx}
                         id={el.id}
                         attribute={el.attribute}
-                        // startDate={el.startDate}
                         amount={el.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                        // insurance={el.insurance}
-                        // additionalProducts={el.additionalProducts}
                       />
                     );
                   })}
