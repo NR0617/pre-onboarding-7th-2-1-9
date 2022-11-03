@@ -9,13 +9,14 @@ const CarItem = ({ car }) => {
   const handleClickCarInfo = () => {
     navigate(`/car/${car.id}`)
   }
+  const commaAmount = convertComma(car?.amount)
   return (
     <FlexContainer onClick={handleClickCarInfo}>
       <CarInfo>
         <BoldText>{car.attribute.brand}</BoldText>
         <BoldText>{car.attribute.name}</BoldText>
         <div>{car.attribute.segment} / {car.attribute.fuelType}</div>
-        <div>월 {convertComma(car.amount)}원 부터</div>
+        <div>월 {commaAmount}원 부터</div>
       </CarInfo>
       <CarImgWrapper>
         <div>

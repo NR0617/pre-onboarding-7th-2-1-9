@@ -6,9 +6,17 @@ import Layout from "../components/Layout"
 import { ContentContainer, CarImg, BoldText } from "../styles/CommonStyle"
 import { useRecoilValue } from "recoil"
 import { filteredCarList } from "../recoil/carList"
+import { convertComma } from "../utils/convertComma"
+import { useEffect } from "react"
+import { setMetaTags } from "../utils/setMetaTags"
 const CarPage = () => {
   const params = useParams()
   const state = useRecoilValue(filteredCarList(params.id))
+  const commaAmount = convertComma(state?.amount)
+
+  useEffect(()=>{
+    setMetaTags(state?.attribute.brand, state?.attribute.name, commaAmount, state?.attribute.imageUrl)
+  },[state?.attribute.brand, state?.attribute.name, commaAmount, state?.attribute.imageUrl])
   return (
     <Layout>
       <Header title={'차량 상세'} />
@@ -17,7 +25,7 @@ const CarPage = () => {
       <ul>
         <ListItem><BoldText>{state?.attribute.brand}</BoldText></ListItem>
         <ListItem><BoldText>{state?.attribute.name}</BoldText></ListItem>
-        <ListItem><BoldText>{state?.amount}</BoldText></ListItem>
+        <ListItem><BoldText>월 {commaAmount} 원</BoldText></ListItem>
       </ul>
 
       <ListHeader>차량 정보</ListHeader>
