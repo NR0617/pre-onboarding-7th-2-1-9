@@ -1,5 +1,3 @@
-# 💙 [배포링크]('https://assignment-03-alitimobility.herokuapp.com/')
-
 ## commit msg 규칙
 
 ### 1. 커밋 유형 지정하기
@@ -20,17 +18,17 @@
 
 💡 ci : CI관련 설정 수정에 대한 커밋
 
-![badge](https://img.shields.io/badge/React-61dafb?logo=React&logoColor=white&style=flat-square) ![badge](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white) ![badge](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white&style=flat-square)
+![badge](https://img.shields.io/badge/React-61dafb?logo=React&logoColor=white&style=flat-square) ![badge](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white&style=flat-square)
 
 > pre-onboarding-7th-2-1-9
+
+## **Demo Page**
+
+### 💙 [배포링크]('https://assignment-03-alitimobility.herokuapp.com/')
 
 ## **Description**
 
 B2C 차량대여 서비스
-
-## **Demo Page**
-
-[데모 페이지](https://assignment-03-alitimobility.herokuapp.com/)
 
 ## **Assignment 1**
 
@@ -40,31 +38,30 @@ B2C 차량대여 서비스
 - 필수 요구 사항
   - Figma 상의 디자인 및 기능 구현
 
-|                                                        Google Chrome                                                        |                                                        iPhone Safari                                                        |
-| :-------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://user-images.githubusercontent.com/74575497/199493615-50c635bf-175b-4bad-9698-7a97cd7b451d.gif" width=300> | <img src="https://user-images.githubusercontent.com/74575497/199493644-a9460d6b-9c18-444d-af08-bcd2b7667159.gif" width=200> |
+| Google Chrome | mobile |
+| :-----------: | :----: |
+
+| ![desktop](https://user-images.githubusercontent.com/104307213/199716091-8417f490-c068-41b4-8207-0fcf9ddaa34c.gif)
+| ![mobile](https://user-images.githubusercontent.com/104307213/199716148-f4c5632b-e84e-41ed-b57c-f9dfbbb95614.gif)
+|
 
 ## **Assignment 2**
 
 - 차량 리스트
 
-  |                                                                차량이 없을 때 처리                                                                |                                                               차량 불러오는 중 처리                                                               |
-  | :-----------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
-  | <p align="center"><img src="https://user-images.githubusercontent.com/74575497/199498073-2eb2b5c9-7c87-4587-8a75-a1934135e9de.png" width=200></p> | <p align="center"><img src="https://user-images.githubusercontent.com/74575497/199497026-f4102819-acba-4fd8-b179-9b51750a17c9.gif" width=200></p> |
+  |                                                           차량이 없을 때 처리                                                            |                                                           차량 불러오는 중 처리                                                            |
+  | :--------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------: |
+  | <p align="center">![no-data](https://user-images.githubusercontent.com/104307213/199716339-b98222ce-5dfc-4190-b54a-24713e4b53cc.gif)</p> | <p align="center"> ![loading](https://user-images.githubusercontent.com/104307213/199716296-709ae1f4-4120-4640-acc4-19a6b159c59a.gif) </p> |
 
 - 차량이 없을 때 처리
-  https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/efe77d1b4737c8a1c2eabcb54631a652fee4d1b4/src/container/Main/component/CarSection.jsx#L7-L21
 
 - 차량 불러오는 중 처리
-  https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/efe77d1b4737c8a1c2eabcb54631a652fee4d1b4/src/container/Main/Main.jsx#L7-L15
 
 ## **Assignment 3**
 
 - 차랑 상세
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/74575497/199497550-ca9526b3-9b09-4102-af71-f275c743153b.png" width=200>
-</p>
+![no-data](https://user-images.githubusercontent.com/104307213/199716866-76595e45-c8af-482c-959c-c30af9c3a0da.gif)
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/efe77d1b4737c8a1c2eabcb54631a652fee4d1b4/src/container/Detail/Detail.jsx#L15-L22
 
