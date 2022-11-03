@@ -1,14 +1,22 @@
-import { AttributeBtnComponent, AttributeBtn } from '../style';
+import { AttributeBtnContainer, AttributeBtn } from './style';
 import { AttributeBttons } from '../../constant/AttributeBttons';
 
-const AttributeHeader = () => {
+const AttributeHeader = ({ setCheckedQuery }) => {
   const ButtonName = Object.keys(AttributeBttons);
+
+  const test = event => {
+    setCheckedQuery(event.target.value);
+  };
   return (
-    <AttributeBtnComponent>
+    <AttributeBtnContainer>
       {ButtonName.map((el, idx) => {
-        return <AttributeBtn key={idx}>{AttributeBttons[el].name}</AttributeBtn>;
+        return (
+          <AttributeBtn key={idx} onClick={test} value={AttributeBttons[el].value}>
+            {AttributeBttons[el].name}
+          </AttributeBtn>
+        );
       })}
-    </AttributeBtnComponent>
+    </AttributeBtnContainer>
   );
 };
 

@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-export const getCarsData = async (size, fuel) => {
+export const getCarsData = async (condition = null) => {
   let query = '';
-  if (!!size && !!fuel) {
-    query = `?${size}&${fuel}`;
+  if (condition) {
+    query = `?${condition}`;
   }
-  const { data } = await axios.get(`/api/cars${query}`);
+  console.log(query);
+  const { data } = await axios.get(`/api/cars/${query}`);
   return data.payload;
 };

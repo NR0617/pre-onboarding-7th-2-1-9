@@ -1,4 +1,4 @@
-import { HeaderContainer } from '../style';
+import { HeaderContainer } from './style';
 
 const PageHeader = ({ children }) => {
   return <HeaderContainer>{children}</HeaderContainer>;
