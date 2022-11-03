@@ -7,10 +7,9 @@ import { DetailSection } from './component/styles';
 
 const DetailContainer = () => {
   const { isLoading } = useCarDetail();
-
+  if (isLoading) return <LoadingCar />;
   return (
     <>
-      {isLoading && <LoadingCar />}
       <DetailSection>
         <Summary />
         <SubDecription />

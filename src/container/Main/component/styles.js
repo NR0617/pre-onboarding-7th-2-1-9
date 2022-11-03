@@ -7,6 +7,13 @@ export const FilterSection = styled.section`
   border-bottom: 1px solid #000;
   overflow: auto;
   white-space: nowrap;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 // CarSection
@@ -29,6 +36,10 @@ export const CarArticle = styled.article`
   width: 100%;
   height: 120px;
   border-bottom: 1px solid #000;
+
+  :hover {
+    background-color: #ededed;
+  }
 `;
 export const CarDescDiv = styled.div`
   display: flex;
