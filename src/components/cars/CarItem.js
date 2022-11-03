@@ -7,9 +7,7 @@ import NewMark from './NewMark'
 const CarItem = ({ car }) => {
   const navigate = useNavigate()
   const handleClickCarInfo = () => {
-    navigate(`/car/${car.id}`, {
-      state: car
-    })
+    navigate(`/car/${car.id}`)
   }
   return (
     <FlexContainer onClick={handleClickCarInfo}>

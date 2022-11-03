@@ -8,3 +8,12 @@ export const carList = selectorFamily({
     return response
   }
 })
+
+export const filteredCarList = selectorFamily({
+  key: 'filteredCarList',
+  get:(id) => async () => {
+    const response = await fetchCarList()
+    const filteredCar = response.filter((car)=>car.id === Number(id))
+    return filteredCar[0]
+  }
+})
