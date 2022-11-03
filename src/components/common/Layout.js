@@ -1,4 +1,4 @@
-import tw from 'tailwind-styled-components'
+import { Container } from "./style"
 
 const Layout = ({children}) => {
   return(
@@ -8,10 +8,5 @@ const Layout = ({children}) => {
   )
 }
 
-const Container = tw.section`
-flex
-items-center
-justify-center
-`
 
 export default Layout

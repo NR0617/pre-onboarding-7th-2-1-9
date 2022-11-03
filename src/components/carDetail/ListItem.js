@@ -1,13 +1,9 @@
-import tw from 'tailwind-styled-components'
+import { ItemLi } from './style'
 
 const ListItem = ({children}) => {
   return(
     <ItemLi>{children}</ItemLi>
   )
 }
-const ItemLi = tw.li`
-  flex
-  p-1.5
-`
 
 export default ListItem

@@ -1,9 +1,8 @@
 import React from "react";
-import tw from 'tailwind-styled-components'
 import { optionList } from "../../utils/constantValue";
 import Filter from "./Filter";
+import { FilterWrapper } from "./style";
 const FilterList = () => {
-
   return (
     <FilterWrapper>
       {optionList.map((option, index) => (
@@ -14,11 +13,5 @@ const FilterList = () => {
   )
 }
 
-const FilterWrapper = tw.section`
-flex
-border-y-2
-border-myBlack
-py-[0.5%]
-`
 
 export default FilterList

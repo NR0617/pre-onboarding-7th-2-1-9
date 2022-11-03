@@ -1,10 +1,11 @@
-import tw from 'tailwind-styled-components'
 import { useNavigate } from "react-router-dom"
-import { CarImg, BoldText } from "../../styles/CommonStyle"
+import { CarImg } from "../common/style"
 import { convertComma } from "../../utils/convertFn"
 import { isNew } from "../../utils/isNew"
 import NewMark from './NewMark'
 import { convertSegmentToKr, convertFuelTypeToKr } from "../../utils/convertFn"
+import { BoldText } from './style'
+import { FlexContainer, CarInfo, CarImgWrapper } from "./style"
 const CarItem = ({ car }) => {
   const navigate = useNavigate()
   const handleClickCarInfo = () => {
@@ -28,24 +29,6 @@ const CarItem = ({ car }) => {
     </FlexContainer>
   )
 }
-
-const FlexContainer = tw.section`
-flex
-p-5
-border-b-2
-border-myBlack
-relative
-`
-const CarInfo = tw.section`
-w-full
-`
-const CarImgWrapper = tw.section`
-div{
-  relative
-  w-full
-  h-full
-}
-`
 
 
 export default CarItem
