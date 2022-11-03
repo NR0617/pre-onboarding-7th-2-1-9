@@ -9,6 +9,7 @@ const ListHeader = ({children}) =>{
 const HeaderName = tw.header`
 bg-myBlue
 text-white
+p-1.5
 `
 
 export default ListHeader

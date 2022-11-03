@@ -7,6 +7,7 @@ const ListItem = ({children}) => {
 }
 const ItemLi = tw.li`
   flex
+  p-1.5
 `
 
 export default ListItem
