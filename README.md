@@ -1,19 +1,3 @@
-## commit msg 규칙
+## 1. [배포링크](https://pre-onboarding-7th-2-1-9-eta.vercel.app)
 
-### 1. 커밋 유형 지정하기
-
-⭐ feat : 새로운 기능에 대한 커밋
-
-🛠 fix : 버그 수정에 대한 커밋
-
-🧱 build : 빌드 관련 파일 수정에 대한 커밋
-
-👏 chore : 그 외 자잘한 수정에 대한 커밋
-
-⚒ refactor :  코드 리팩토링에 대한 커밋
-
-🎨 style : 코드 스타일 혹은 포맷 등에 관한 커밋
-
-✏ docs : 문서 수정에 대한 커밋
-
-💡 ci : CI관련 설정 수정에 대한 커밋
+## 2. [commit msg 규칙](https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/wiki/commit-msg-%EA%B7%9C%EC%B9%99)
