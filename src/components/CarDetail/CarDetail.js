@@ -28,7 +28,7 @@ function CarDetail({ carList }) {
             property: 'og:title',
             content: `${detail?.attribute.brand} ${detail?.attribute?.name}`,
           },
-          { property: 'og:image', content: `${detail?.attribute.imagUrl}` },
+          { property: 'og:image', content: `${detail?.attribute.imageUrl}` },
           { property: 'og:url', content: window.location.href },
         ]}
       />
