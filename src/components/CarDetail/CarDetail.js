@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import CarDetailInfo from './CarDetailInfo';
 import CarDetailProfileBox from './CarDetailProfileBox';
@@ -14,10 +14,10 @@ function CarDetail({ carList }) {
     detail = carList[idx];
   }
 
-  useEffect(() => {
-    if (detail?.length) {
+  return (
+    <div>
       <Helmet
-        title="알티모빌리티"
+        title={(detail?.attribute.brand, detail?.attribute?.name)}
         meta={[
           {
             name: `${detail?.attribute.brand} ${detail?.attribute?.name}`,
@@ -31,13 +31,7 @@ function CarDetail({ carList }) {
           { property: 'og:image', content: `${detail?.attribute.imagUrl}` },
           { property: 'og:url', content: window.location.href },
         ]}
-      />;
-    }
-    return () => {};
-  }, [detail]);
-
-  return (
-    <div>
+      />
       <CarDetailProfileBox image={detail?.attribute.imageUrl} brand={detail} />
       <CarDetailInfo info={detail} />
     </div>
