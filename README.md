@@ -18,15 +18,15 @@
 
 ## 📝 목차
 
-- [📰 프로젝트 설명](#📰-프로젝트-설명)
-- [🛠️ Dev Tools](#🛠️-dev-tools)
-- [🖥 프로젝트 실행 방법](#🖥-프로젝트-실행-방법)
+- [📰 프로젝트 설명](#-프로젝트-설명)
+- [🛠️ Dev Tools](#-dev-tools)
+- [🖥 프로젝트 실행 방법](#-프로젝트-실행-방법)
 
 ## **📰 프로젝트 설명**
 
 차량 대여를 위해 차량 목록을 불러와서 표시해주는 서비스입니다.
 
-## **🛠️ Dev Tools**
+## **🛠 Dev Tools**
 
 ![badge](https://img.shields.io/badge/React-61dafb?logo=React&logoColor=white&style=flat-square) ![badge](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white) ![badge](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white&style=flat-square)
 
