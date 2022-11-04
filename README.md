@@ -2,13 +2,23 @@
 
 > pre-onboarding-7th-2-1-9
 
+| <img src="https://avatars.githubusercontent.com/u/58911113?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/74575497?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/72599761?v=4" width="120" height="120"/> |
+| :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
+|                                           👑 권준                                           |                                           김경훈                                            |                                           김수정                                           |
+|                            [@jun-05](https://github.com/jun-05)                             |                          [@tirhande](https://github.com/tirhande)                           |                        [@crystal993](https://github.com/crystal993)                        |
+
+| <img src="https://avatars.githubusercontent.com/u/104307213?v=4" width="120" height="120"/> | <img src="https://avatars.githubusercontent.com/u/94212747?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/77476348?v=4"  width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/76990149?v=4" width="120" height="120"/> |
+| :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
+|                                           송슬기                                            |                                           오나래                                            |                                            이창훈                                            |                                           전이진                                           |
+|                          [@songseul](https://github.com/songseul)                           |                            [@NR0617](https://github.com/NR0617)                             |                 [@anotheranotherhoon](https://github.com/anotheranotherhoon)                 |                          [@pongdang](https://github.com/pongdang)                          |
+
 ## **✨ 배포링크**
 
 ## [데모 페이지 바로가기](https://pre-onboarding-7th-2-1-9.vercel.app)
 
 ## 📝 목차
 
-- [📰 프로젝트 설명](#📰-description)
+- [📰 프로젝트 설명](#📰-프로젝트-설명)
 - [🛠️ Dev Tools](#🛠️-dev-tools)
 - [🖥 프로젝트 실행 방법](#🖥-프로젝트-실행-방법)
 
@@ -46,7 +56,7 @@ pre-onboarding-7th-2-1-9 % npm build
 
 [🖍 3차 토의결과](https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/discussions/8)
 
-[🥇 선정 결과](https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/discussions/1)
+[🥇 선정 결과](https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/pull/23#issue-1435416747)
 
 ## **📝 디렉토리 구조**
 
@@ -228,7 +238,7 @@ return (
 <summary>Lint, Formatter 규칙</summary>
 <div markdown="1">
 
-## **Prettier, ESLint 규칙 **
+## **Prettier, ESLint 규칙**
 
 ##### prettier
 
@@ -246,7 +256,7 @@ return (
   arrowParens: 'avoid', // arrow function parameter가 하나일 경우 괄호 생략
 ```
 
-- </div>
+ </div>
   </details>
 
 ## 📚 사용 Library
