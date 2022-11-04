@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import CarDetailInfo from './CarDetailInfo';
 import CarDetailProfileBox from './CarDetailProfileBox';
-import { setMetaTags } from '../../Seo/MetaTag';
+import { Helmet } from 'react-helmet';
 
 function CarDetail({ carList }) {
   const { id } = useParams();
@@ -16,12 +16,24 @@ function CarDetail({ carList }) {
 
   useEffect(() => {
     if (detail?.length) {
-      setMetaTags({
-        title: `${detail?.attribute.brand} ${detail?.attribute?.name}`,
-        description: `월 ${detail?.amount} 원`,
-        imageUrl: `${detail?.attribute.imagUrl}`,
-      });
+      <Helmet
+        title="알티모빌리티"
+        meta={[
+          {
+            name: `${detail?.attribute.brand} ${detail?.attribute?.name}`,
+            content: `월 ${detail?.amount} 원`,
+          },
+          { property: 'og:type', content: `월 ${detail?.amount} 원` },
+          {
+            property: 'og:title',
+            content: `${detail?.attribute.brand} ${detail?.attribute?.name}`,
+          },
+          { property: 'og:image', content: `${detail?.attribute.imagUrl}` },
+          { property: 'og:url', content: window.location.href },
+        ]}
+      />;
     }
+    return () => {};
   }, [detail]);
 
   return (
