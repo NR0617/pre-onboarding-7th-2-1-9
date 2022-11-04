@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import CarDetailInfo from './CarDetailInfo';
 import CarDetailProfileBox from './CarDetailProfileBox';
-import { setMetaTags } from '../../Seo/MetaTag';
+import { Helmet } from 'react-helmet';
 
 function CarDetail({ carList }) {
   const { id } = useParams();
@@ -14,18 +14,24 @@ function CarDetail({ carList }) {
     detail = carList[idx];
   }
 
-  useEffect(() => {
-    if (detail?.length) {
-      setMetaTags({
-        title: `${detail?.attribute.brand} ${detail?.attribute?.name}`,
-        description: `월 ${detail?.amount} 원`,
-        imageUrl: `${detail?.attribute.imagUrl}`,
-      });
-    }
-  }, [detail]);
-
   return (
     <div>
+      <Helmet
+        title={(detail?.attribute.brand, detail?.attribute?.name)}
+        meta={[
+          {
+            name: `${detail?.attribute.brand} ${detail?.attribute?.name}`,
+            content: `월 ${detail?.amount} 원`,
+          },
+          { property: 'og:type', content: `월 ${detail?.amount} 원` },
+          {
+            property: 'og:title',
+            content: `${detail?.attribute.brand} ${detail?.attribute?.name}`,
+          },
+          { property: 'og:image', content: `${detail?.attribute.imageUrl}` },
+          { property: 'og:url', content: window.location.href },
+        ]}
+      />
       <CarDetailProfileBox image={detail?.attribute.imageUrl} brand={detail} />
       <CarDetailInfo info={detail} />
     </div>
